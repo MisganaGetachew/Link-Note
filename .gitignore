@@ -1,5 +1,6 @@
-backend/venv
-backend/token.json
+# Ignore credentials and token files
 backend/credentials.json
+backend/token.json
 
-
+# Ignore virtual environment
+backend/venv/

@@ -1,3 +1,5 @@
+/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,178 +7,195 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7; /* Light background */
+    color: #333; /* Dark text */
+    line-height: 1.6;
 }
 
-/* Header and Navbar */
-.header {
-    background-color: #0073e6;
-    color: #fff;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #27ae60; /* Upwork-like green */
     padding: 20px 0;
+    color: #fff;
     text-align: center;
 }
 
-.navbar {
+header h1 {
+    font-size: 36px; /* Increased font size for hierarchy */
+    font-weight: 700;
+}
+
+nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    margin-bottom: 10px;
+    justify-content: space-between; /* Space between left and right nav */
+    margin-top: 10px;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
+.nav-left {
+    flex: 1; /* Left side takes available space */
 }
 
-.nav-links {
-    list-style: none;
+.nav-right {
+    display: flex; /* Align nav links to the right */
+    justify-content: flex-end; /* Align right */
 }
 
-.nav-links li {
-    display: inline;
-    margin-right: 15px;
-}
-
-.nav-links a {
-    color: white;
+.nav-link {
+    color: #fff;
     text-decoration: none;
-    font-size: 1em;
+    margin-left: 20px;
+    font-weight: 600;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
     text-decoration: underline;
 }
 
-.header h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 28px; /* Increased font size */
+    font-weight: 700;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .search-bar {
-    margin: 20px auto;
-    max-width: 400px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid #333;
+    margin-top: 15px;
     outline: none;
 }
 
-.search-bar input:focus {
-    border-color: #005bb5;
+.search-bar:focus {
+    border-color: #27ae60; /* Green focus color */
 }
 
-/* Main Content */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+.links-section {
+    margin-bottom: 40px;
 }
 
-.news-feed {
+.links-list {
+    margin-top: 20px;
+    display: flex; /* Horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Space between cards */
+}
+
+.link-card {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    background: #ffffff; /* White background for link cards */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 20px); /* Updated flex basis for wider cards */
+    max-width: 300px; /* Increased max width for each card */
+    transition: transform 0.3s; /* Transition effect */
 }
 
-.news-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(50% - 10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
+.link-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
-.news-card:hover {
-    transform: translateY(-5px);
-}
-
-.news-image {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.news-title {
-    font-size: 1.5em;
-    color: #0073e6;
-    margin-bottom: 10px;
-}
-
-.news-description {
-    font-size: 1em;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.news-link {
-    font-size: 0.9em;
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.news-link:hover {
-    text-decoration: underline;
-}
-
-.news-date {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.8em;
-    color: #777;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.footer p {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    display: inline;
+.link-thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
     margin-right: 15px;
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9em;
+.link-details {
+    flex-grow: 1;
 }
 
-.footer-links a:hover {
+.link-details strong {
+    font-size: 16px; /* Increased font size for strong text */
+}
+
+.link-details a {
+    color: #27ae60; /* Green link color */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px; /* Increased font size for link text */
+}
+
+.link-details a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .news-card {
-        width: 100%;
-    }
+.link-details p {
+    font-size: 12px; /* Standardized font size for paragraph text */
+}
+
+.social-media {
+    font-weight: 600;
+    font-size: 12px; /* Font size for social media source */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.input-section {
+    background: #ffffff; /* White background for input section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Increased spacing */
+}
+
+.input-section h3 {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #27ae60; /* Green focus color */
+}
+
+textarea {
+    height: 100px;
+}
+
+.btn {
+    background: #27ae60; /* Green button */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
 }

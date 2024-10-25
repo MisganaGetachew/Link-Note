@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Link-Note</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Link-Note</h1>
+            <nav>
+          
+                    <div class="nav-right">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="intro">
+                <h2>Store Your Links</h2>
+                <p>Easily save your favorite links along with notes and social media sources.</p>
+                <input type="text" placeholder="Search your links..." class="search-bar" />
+            </div>
+            <section class="links-section">
+                <h3>Your Links</h3>
+                <div class="links-list">
+                    <div class="link-card">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail" class="link-thumbnail">
+                        <div class="link-details">
+                            <strong>Link Title 1</strong>
+                            <a href="https://www.google.com" target="_blank">www.google.com</a>
+                            <p>Source: <span class="social-media">Facebook</span></p>
+                            <p>Note: Great place to search for information.</p>
+                        </div>
+                    </div>
+                    <div class="link-card">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail" class="link-thumbnail">
+                        <div class="link-details">
+                            <strong>Link Title 2</strong>
+                            <a href="https://www.example.com" target="_blank">www.example.com</a>
+                            <p>Source: <span class="social-media">Twitter</span></p>
+                            <p>Note: Useful for keeping up with trends.</p>
+                        </div>
+                    </div>
+                    <div class="link-card">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail" class="link-thumbnail">
+                        <div class="link-details">
+                            <strong>Link Title 3</strong>
+                            <a href="https://www.github.com" target="_blank">www.github.com</a>
+                            <p>Source: <span class="social-media">LinkedIn</span></p>
+                            <p>Note: A great platform for sharing projects.</p>
+                        </div>
+                    </div>
+                    <div class="link-card">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail" class="link-thumbnail">
+                        <div class="link-details">
+                            <strong>Link Title 4</strong>
+                            <a href="https://www.reddit.com" target="_blank">www.reddit.com</a>
+                            <p>Source: <span class="social-media">Instagram</span></p>
+                            <p>Note: A community for all interests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="input-section">
+                <h3>Add a New Link</h3>
+                <input type="text" placeholder="Social Media Source" aria-label="Social Media Source" />
+                <input type="url" placeholder="Link URL" aria-label="Link URL" />
+                <textarea placeholder="Add a Note..." aria-label="Add a Note"></textarea>
+                <button class="btn">Save Link</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Link-Note. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

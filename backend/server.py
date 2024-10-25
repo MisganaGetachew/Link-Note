@@ -1,16 +1,27 @@
 from fastapi import FastAPI
-# import win32com.client
 import requests
-
+from pydantic import BaseModel
 app = FastAPI()
+
+
+class Link(BaseModel):
+    social_Media: str = None
+    link: str = None
+    Note: str = None
 
 
 @app.get('/')
 def home():
-    requests
-    return {"message": "another home"}
+
+    return {"message": "home is working properlly"}
 
 
-@app.get('/home')
-def main():
-    return {"message": "hello this is main."}
+@app.get('/links')
+def get_links(url, note):
+
+    return {"Note": note, "url": url}
+
+
+@app.post('/save-links')
+async def save_link(links: Link):
+    return {"message": "it is working", "data": links}

@@ -16,6 +16,12 @@ def home():
     return {"message": "home is working properlly"}
 
 
+@app.get('/check')
+def check():
+
+    return {"message": "this is a check message for deployment testing"}
+
+
 @app.get('/links')
 def get_links(url, note):
 

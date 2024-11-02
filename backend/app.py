@@ -5,10 +5,10 @@ from pymongo.mongo_client import MongoClient
 from pydantic import BaseModel
 from bson.json_util import dumps, loads
 from fastapi.responses import JSONResponse
-from mongo import mongouri
+from mongo import mongo_uri
 
 app = FastAPI()
-uri = mongouri
+uri = mongo_uri
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client["Links"]
 collection = db["link-info"]

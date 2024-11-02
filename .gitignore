@@ -4,3 +4,4 @@ backend/token.json
 
 # Ignore virtual environment
 venv/
+mongo.py
